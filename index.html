@@ -66,43 +66,22 @@
 </div>
 
 <script>
-
     const loginForm = document.getElementById('loginForm');
-    const emailInput = document.createElement('input');
-	
-    emailInput.type = 'email';
-    emailInput.className = 'form-control';
-    emailInput.id = 'inputEmail';
-    emailInput.placeholder = 'Email';
-	
-    const passwordInput = document.createElement('input');
-    passwordInput.type = 'password';
-    passwordInput.className = 'form-control';
-    passwordInput.id = 'inputPassword';
-    passwordInput.placeholder = 'Password';
-	
-    const emailLabel = document.createElement('label');
-    emailLabel.className = 'form-label';
-    emailLabel.htmlFor = 'inputEmail';
-    emailLabel.innerHTML = '<strong>Email</strong>';
-	
-    const passwordLabel = document.createElement('label');
-    passwordLabel.className = 'form-label';
-    passwordLabel.htmlFor = 'inputPassword';
-    passwordLabel.innerHTML = '<strong>Password</strong>';
-	
-    const divEmail = document.createElement('div');
-    divEmail.className = 'mb-3';
-    divEmail.appendChild(emailLabel);
-    divEmail.appendChild(emailInput);
-	
-    const divPassword = document.createElement('div');
-    divPassword.className = 'mb-3';
-    divPassword.appendChild(passwordLabel);
-    divPassword.appendChild(passwordInput);
-    loginForm.appendChild(divEmail);
-    loginForm.appendChild(divPassword);
-	
+    loginForm.innerHTML = `
+        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+        <button type="submit" class="btn btn-primary">Log in</button>
+    `;
+
+    loginForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const email = document.getElementById('inputEmail').value;
+        const password = document.getElementById('inputPassword').value;
+
+        console.log('Email:', email);
+        console.log('Password:', password);
+    });
 </script>
 
 </body>
