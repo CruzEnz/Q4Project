@@ -30,9 +30,14 @@
 			border-style: solid;
   			border-width: medium;
   			border-color: grey;
+			
 			}
 		h1 {
 			color: orange;
+			}
+		h2 {
+			color: orange;
+			}
 
 	</style>
 </head>
@@ -67,6 +72,10 @@
               <li><a class="dropdown-item" href="page4.html">View Quarter 3 Project</a></li>
 			  </ul>
 			  </li>
+
+		 <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="comments.html" role="button" data-bs-toggle="dropdown"><strong>Third Quarter</strong></a>
+			 </li>
 			  
 	</ul>
 	  <form class="container-fluid" "d-flex">
@@ -81,15 +90,21 @@
 <br>
 <br>
 <br>
-		<center>
-		<div class="message mb-3">
-			<label for="inputMessage">Message</label>
-			<textarea type="Message" class="form-control" id="inputMessage" rows="3" placeholder="Enter your message"></textarea>
+
+<div class="container mt-3">
+	<h2><strong>Any comments to tell us about? Type it down here, we'd love to know.</strong></h2>
+
+	<form>	
+		<div class="comment mb-3">
+			<h2><center><label for="inputComment">Comment</label></center></h2>
+			<textarea type="Comment" class="form-control" id="inputComment" rows="3" placeholder="Enter your comment"></textarea>
 		</div>
-		</center>
-	 <div>
-			<button type="submit" class="btn btn-secondary">Submit</button>
+	   
+	    <div>
+			<center><button type="comment" class="btn btn-secondary">Comment</button></center>
 		</div>
+	</form>
+</div>
 
 </br>
 </br>
@@ -100,4 +115,3 @@
 
 </body>
 </html>
-
